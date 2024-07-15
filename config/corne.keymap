@@ -25,35 +25,7 @@
             bindings = <&kp MINUS>, <&tog 4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        w_snipping: w_snipping {
-            compatible = "zmk,behavior-tap-dance";
-            label = "W_SNIPPING";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&kp LEFT_SHIFT>, <&kp S>;
-        };
-
-        m_snipping: m_snipping {
-            compatible = "zmk,behavior-tap-dance";
-            label = "M_SNIPPING";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp LEFT_GUI>, <&kp NUMBER_4>;
-        };
-
-        sel_w_backward: sel_w_backward {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEL_W_BACKWARD";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>, <&kp LEFT_ARROW>;
-        };
-
-        sel_w_forward: sel_w_forward {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEL_W_FORWARD";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>, <&kp RIGHT_ARROW>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -80,19 +52,19 @@
 
         nav {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6           &kp N7    &kp N8  &kp N9          &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT         &kp DOWN  &kp UP  &kp RIGHT       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &sel_w_backward  &trans    &trans  &sel_w_forward  &trans  &trans
-                        &trans  &trans  &trans    &trans           &trans    &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6                  &kp N7    &kp N8  &kp N9                   &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT                &kp DOWN  &kp UP  &kp RIGHT                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LC(LEFT_ARROW))  &trans    &trans  &kp LS(LC(RIGHT_ARROW))  &trans  &trans
+                        &trans  &trans  &trans    &trans                  &trans    &trans
             >;
         };
 
         shortcuts {
             bindings = <
-&trans  &trans       &trans       &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &w_snipping  &m_snipping  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR   &bt BT_PRV   &bt BT_NXT  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans      &trans  &trans    &trans  &trans  &trans
+&trans  &trans         &trans                &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(S))  &kp LG(LA(NUMBER_4))  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR     &bt BT_PRV            &bt BT_NXT  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                             &trans      &trans  &trans    &trans  &trans  &trans
             >;
         };
 
