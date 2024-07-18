@@ -70,10 +70,10 @@
 
         league {
             bindings = <
-&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G     &trans  &trans  &trans  &trans  &trans  &trans
-&kp V      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                       &kp ESCAPE    &kp LEFT_ALT  &trans    &trans  &trans  &trans
+&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &kp A         &kp S         &kp D         &kp F         &kp G     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                            &kp ESCAPE    &kp LEFT_ALT  &trans    &trans  &trans  &trans
             >;
         };
     };
