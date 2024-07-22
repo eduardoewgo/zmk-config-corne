@@ -25,7 +25,7 @@
             bindings = <&kp BACKSPACE>, <&tog 4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
