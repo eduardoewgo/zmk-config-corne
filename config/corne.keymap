@@ -29,6 +29,45 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_lp {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <19 20>;
+            require-prior-idle-ms = <100>;
+            layers = <5>;
+        };
+
+        combo_rp {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <100>;
+            layers = <5>;
+        };
+
+        combo_lb {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <31 32>;
+            require-prior-idle-ms = <100>;
+            layers = <5>;
+        };
+
+        combo_rb {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <32 33>;
+            require-prior-idle-ms = <100>;
+            layers = <5>;
+        };
+
+        tog_urob {
+            bindings = <&tog 5>;
+            key-positions = <35 23>;
+            require-prior-idle-ms = <100>;
+            layers = <0 5>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -93,11 +132,6 @@
         cond_league {
             if-layers = <1 2>;
             then-layer = <3>;
-        };
-
-        cond_urob {
-            if-layers = <4 1>;
-            then-layer = <5>;
         };
     };
 };
