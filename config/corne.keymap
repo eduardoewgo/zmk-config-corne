@@ -43,18 +43,18 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans    &kp HASH  &kp DLLR  &kp CARET      &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &kp PIPE          &kp ASTRK      &kp FSLH
-&trans  &trans  &kp AMPS  &kp EXCL  &kp AT    &kp PERCENT    &kp GRAVE          &kp LPAR  &kp RPAR  &kp EQUAL         &kp PLUS       &kp MINUS
-&trans  &trans  &trans    &trans    &trans    &trans         &kp TILDE          &kp LBRC  &kp RBRC  &kp GREATER_THAN  &kp LESS_THAN  &kp UNDER
-                          &trans    &trans    &trans         &trans             &trans    &trans
+&trans  &trans       &trans    &trans    &trans    &trans       &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &kp PIPE          &kp ASTRK      &kp FSLH
+&trans  &kp PERCENT  &kp AMPS  &kp EXCL  &kp AT    &kp DLLR     &kp GRAVE          &kp LPAR  &kp RPAR  &kp EQUAL         &kp PLUS       &kp MINUS
+&trans  &trans       &trans    &trans    &kp HASH  &kp CARET    &kp TILDE          &kp LBRC  &kp RBRC  &kp GREATER_THAN  &kp LESS_THAN  &kp UNDER
+                               &trans    &trans    &trans       &trans             &trans    &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6                  &kp N7           &kp N8       &kp N9                   &kp N0  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp LEFT                &kp DOWN         &kp UP       &kp RIGHT                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LS(LEFT_ARROW))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LA(LS(RIGHT_ARROW))  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6                  &kp N7           &kp N8       &kp N9                   &kp N0                  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp LEFT                &kp DOWN         &kp UP       &kp RIGHT                &trans                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LS(LEFT_ARROW))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LA(LS(RIGHT_ARROW))  &kp LS(LC(LEFT_ARROW))  &kp LS(LC(RIGHT_ARROW))
                         &trans  &trans  &trans    &trans                  &kp LG(LS(A))    &trans
             >;
         };
@@ -63,7 +63,7 @@
             bindings = <
 &none  &none          &none                     &none       &none  &none    &kp LG(GRAVE)   &kp LC(LA(D))      &kp LC(LA(F))    &kp LC(LA(G))  &none     &none
 &none  &kp LG(LS(S))  &kp LG(LS(LC(NUMBER_4)))  &none       &none  &none    &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT     &kp C_PP  &none
-&none  &bt BT_CLR     &bt BT_PRV                &bt BT_NXT  &none  &none    &trans          &trans             &none            &none          &none     &none
+&none  &bt BT_CLR     &bt BT_PRV                &bt BT_NXT  &none  &none    &trans          &trans             &none            &none          &none     &kp CAPSLOCK
                                                 &none       &none  &none    &none           &none              &none
             >;
         };
