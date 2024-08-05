@@ -76,14 +76,28 @@
                               &kp LEFT_ALT  &trans  &trans    &trans  &trans  &trans
             >;
         };
+
+        urob {
+            bindings = <
+&kp TAB         &kp Q        &kp W       &kp E           &kp R             &kp T        &kp Y    &kp U             &kp I           &kp O            &kp P                  &tl_backspace
+&mo 2           &hm LCTRL A  &hm RALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G        &kp H    &hm LEFT_SHIFT J  &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm LEFT_CONTROL SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z        &kp X       &kp C           &kp V             &kp B        &kp N    &kp M             &kp COMMA       &kp DOT          &kp FSLH               &kp MINUS
+                                         &mo 1           &kp BACKSPACE     &kp SPACE    &kp RET  &kp ESC           &mo 1
+            >;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        one_two {
+        cond_league {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+
+        cond_urob {
+            if-layers = <4 1>;
+            then-layer = <5>;
         };
     };
 };
