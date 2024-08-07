@@ -17,6 +17,8 @@
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <150>;
         };
 
         tl_escape: tl_escape {
@@ -26,6 +28,18 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        ht_thumbs: ht_thumbs {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <150>;
+            label = "HT_THUMBS";
         };
     };
 
@@ -108,10 +122,10 @@
 
         default_layer {
             bindings = <
-&kp TAB         &kp Q        &kp W       &kp E           &kp R             &kp T                     &kp Y    &kp U             &kp I           &kp O            &kp P                  &tl_escape
-&mo 2           &hm LCTRL A  &hm RALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G                     &kp H    &hm LEFT_SHIFT J  &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm LEFT_CONTROL SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z        &kp X       &kp C           &kp V             &kp B                     &kp N    &kp M             &kp COMMA       &kp DOT          &kp FSLH               &kp MINUS
-                                         &mo 1           &kp BACKSPACE     &mt LEFT_COMMAND SPACE    &kp RET  &kp ESC           &mo 1
+&kp TAB         &kp Q        &kp W       &kp E           &kp R             &kp T                            &kp Y    &kp U             &kp I           &kp O            &kp P                  &tl_escape
+&mo 2           &hm LCTRL A  &hm RALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F  &kp G                            &kp H    &hm LEFT_SHIFT J  &hm LEFT_GUI K  &hm RIGHT_ALT L  &hm LEFT_CONTROL SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z        &kp X       &kp C           &kp V             &kp B                            &kp N    &kp M             &kp COMMA       &kp DOT          &kp FSLH               &kp MINUS
+                                         &mo 1           &kp BACKSPACE     &ht_thumbs LEFT_COMMAND SPACE    &kp RET  &kp ESC           &mo 1
             >;
         };
 
